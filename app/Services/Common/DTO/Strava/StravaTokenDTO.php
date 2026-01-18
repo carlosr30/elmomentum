@@ -2,7 +2,7 @@
 
 namespace App\Services\Common\DTO\Strava;
 
-class StravaTokenDTO
+final class StravaTokenDTO
 {
     private string $accessToken;
     private string $refreshToken;
@@ -21,7 +21,7 @@ class StravaTokenDTO
         return $this->accessToken;
     }
 
-    public function setAccessToken(string $accessToken): self
+    private function setAccessToken(string $accessToken): self
     {
         $this->accessToken = $accessToken;
         return $this;
@@ -32,7 +32,7 @@ class StravaTokenDTO
         return $this->refreshToken;
     }
 
-    public function setRefreshToken(string $refreshToken): self
+    private function setRefreshToken(string $refreshToken): self
     {
         $this->refreshToken = $refreshToken;
         return $this;
@@ -43,7 +43,7 @@ class StravaTokenDTO
         return $this->expiresIn;
     }
 
-    public function setExpiresIn(int $expiresIn): self
+    private function setExpiresIn(int $expiresIn): self
     {
         $this->expiresIn = $expiresIn;
         return $this;

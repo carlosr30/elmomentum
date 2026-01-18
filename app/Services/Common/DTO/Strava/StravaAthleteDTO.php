@@ -2,7 +2,7 @@
 
 namespace App\Services\Common\DTO\Strava;
 
-class StravaAthleteDTO
+final class StravaAthleteDTO
 {
     private int $id;
     private string $username;
@@ -26,7 +26,7 @@ class StravaAthleteDTO
         return $this->id;
     }
 
-    public function setId(int $id): self
+    private function setId(int $id): self
     {
         $this->id = $id;
         return $this;
@@ -37,7 +37,7 @@ class StravaAthleteDTO
         return $this->username;
     }
 
-    public function setUsername(string $username): self
+    private function setUsername(string $username): self
     {
         $this->username = $username;
         return $this;
@@ -48,7 +48,7 @@ class StravaAthleteDTO
         return $this->firstName;
     }
 
-    public function setFirstName(string $firstName): self
+    private function setFirstName(string $firstName): self
     {
         $this->firstName = $firstName;
         return $this;
@@ -59,7 +59,7 @@ class StravaAthleteDTO
         return $this->lastName;
     }
 
-    public function setLastName(string $lastName): self
+    private function setLastName(string $lastName): self
     {
         $this->lastName = $lastName;
         return $this;
@@ -75,7 +75,7 @@ class StravaAthleteDTO
         return $this->profile;
     }
 
-    public function setProfile(string $profile): self
+    private function setProfile(string $profile): self
     {
         $this->profile = $profile;
         return $this;

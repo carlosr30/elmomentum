@@ -2,7 +2,7 @@
 
 namespace App\Services\Common\DTO\Strava;
 
-class StravaActivityDTO
+final class StravaActivityDTO
 {
     private string $provider = 'strava';
     private int $externalId;
@@ -22,7 +22,7 @@ class StravaActivityDTO
         return $this->externalId;
     }
 
-    public function setExternalId(int $externalId): self
+    private function setExternalId(int $externalId): self
     {
         $this->externalId = $externalId;
         return $this;
@@ -33,7 +33,7 @@ class StravaActivityDTO
         return $this->distance;
     }
 
-    public function setDistance(float $distance): self
+    private function setDistance(float $distance): self
     {
         $this->distance = $distance;
         return $this;
@@ -44,7 +44,7 @@ class StravaActivityDTO
         return $this->startDate;
     }
 
-    public function setStartDate(string $startDate): self
+    private function setStartDate(string $startDate): self
     {
         $this->startDate = $startDate;
         return $this;
