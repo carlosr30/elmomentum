@@ -23,3 +23,10 @@ The goal is simple: **make running together more motivating**.
 - **Database:** MySQL
 - **Queue:** Laravel Queues (for syncing activities)
 - **API Provider:** Strava API
+
+## 🚧 Project Status
+
+**elmomentum is currently in active development.**
+
+Features, data models, and APIs are still evolving, and breaking changes may occur.  
+The project is being built incrementally, starting with Strava integration and core syncing logic before expanding to leaderboards and UI.
