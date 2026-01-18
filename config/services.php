@@ -35,4 +35,11 @@ return [
         ],
     ],
 
+    'strava' => [
+        'client_id' => env('STRAVA_CLIENT_ID'),
+        'client_secret' => env('STRAVA_CLIENT_SECRET'),
+        'redirect_url' => env('STRAVA_REDIRECT_URL'),
+        'authorize_url' => env('STRAVA_AUTHORIZE_URL'),
+        'token_url' => env('STRAVA_TOKEN_URL'),
+    ]
 ];
