@@ -41,5 +41,6 @@ return [
         'redirect_url' => env('STRAVA_REDIRECT_URL'),
         'authorize_url' => env('STRAVA_AUTHORIZE_URL'),
         'token_url' => env('STRAVA_TOKEN_URL'),
+        'api_base_url' => env('STRAVA_API_BASE_URL'),
     ]
 ];

@@ -1,23 +1,19 @@
 <?php
 
-namespace App\Services\Common\DTO\Token;
+namespace App\Services\Common\DTO\Strava;
 
-use App\Services\Common\DTO\User\UserDTO;
-
-class TokenDTO
+class StravaTokenDTO
 {
     private string $accessToken;
     private string $refreshToken;
     private int $expiresIn;
 
-    private UserDTO $userDTO;
-
     public static function fromArray(array $data): self
     {
         return (new self())
-            ->setAccessToken($data['accessToken'])
-            ->setRefreshToken($data['refreshToken'])
-            ->setExpiresIn($data['expiresIn']);
+            ->setAccessToken($data['access_token'])
+            ->setRefreshToken($data['refresh_token'])
+            ->setExpiresIn($data['expires_in']);
     }
 
     public function getAccessToken(): string
@@ -52,15 +48,5 @@ class TokenDTO
         $this->expiresIn = $expiresIn;
         return $this;
     }
-
-    public function getUserDTO(): UserDTO
-    {
-        return $this->userDTO;
-    }
-
-    public function setUserDTO(UserDTO $userDTO): self
-    {
-        $this->userDTO = $userDTO;
-        return $this;
-    }
 }
+
