@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\LeaderboardEntryResource;
 use App\Services\API\v1\Leaderboard\LeaderboardService;
-use Illuminate\Http\Resources\Json\JsonResource;
 
 class LeaderboardController extends Controller
 {
@@ -13,7 +13,7 @@ class LeaderboardController extends Controller
 
     public function index()
     {
-        return JsonResource::collection(
+        return LeaderboardEntryResource::collection(
             $this->leaderboardService->getLeaderboard()
         );
     }
