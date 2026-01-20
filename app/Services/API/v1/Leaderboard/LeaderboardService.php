@@ -20,6 +20,7 @@ class LeaderboardService
                 'users.id',
                 'users.name',
                 'users.avatar',
+                DB::raw('COUNT(activities.id) as activities_count'),
                 DB::raw('COALESCE(SUM(activities.distance), 0) as total_distance')
             )
             ->groupBy('users.id', 'users.name', 'users.avatar')

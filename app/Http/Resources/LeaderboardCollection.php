@@ -23,7 +23,9 @@ class LeaderboardCollection extends ResourceCollection
     {
         return [
             'meta' => [
-                'totalDistance' => $this->collection->sum('total_distance')
+                'runners' => $this->collection->count(),
+                'totalRunsLogged' => $this->collection->sum('activities_count'),
+                'totalDistance' => number_format($this->collection->sum('total_distance') / 1000, 0) . 'km'
             ]
         ];
     }

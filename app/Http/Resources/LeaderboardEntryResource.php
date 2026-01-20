@@ -13,6 +13,7 @@ class LeaderboardEntryResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'avatar' => $this->avatar,
+            'activitiesCount' => $this->activities_count,
             'totalDistance' => number_format($this->total_distance / 1000, 0) . 'km'
         ];
     }
